@@ -1,0 +1,49 @@
+Combinators
+
+
+/* <div>
+  <p>Paragraph 1</p>
+  <span><p>Paragraph 2</p></span>
+  <p>Para 3</p>
+</div>
+<p>Paragraph 4</p> 
+<span><p>5</P</spam>
+<p>para 6</p>
+*/
+
+
+div p { color: red; }       /* Descendant: all <p> inside a <div> (1 & 2 & 3) */
+div > p { color: blue; }    /* Child: only direct children  1 & 3 */
+div + p { color: red; }   /* Selects the FIRST <p> right after <div> → Para 1 */
+div ~ p { color: blue; }  /* Selects ALL <p> after <div> → 4 & 6*/
+
+there is no selector to select children before a div
+
+
+Attribute selectors
+
+[type="text"] { border: 2px solid blue; }   /* Exact match */
+[href^="https"] { color: green; }          /* Starts with 'https' */
+[alt$=".png"] { border: 1px solid red; }   /* Ends with '.png' */
+[class*="btn-"] { background: orange; }    /* Contains 'btn-' */
+
+
+
+pseudo classes
+
+p:first-child { color: red; }       /* Matches <p> if it is literally the 1st child of parent */
+p:first-of-type { color: blue; }    /* Matches the 1st <p> among siblings, even if not 1st child */
+
+li:nth-child(odd) { background: #eee; }     /* Odd items (1 & 3) */
+li:nth-child(2n+1)  /*matches all odd children  n starts from 0*/
+li:not(.disabled) { color: green; }         /* All except class="disabled" */
+li:has(.disabled) { color: green; }         /* all li with class="disabled" */
+input:focus { border: 2px solid blue; }     /* When active */
+li:hover { background: yellow; }            /* On hover */
+
+
+Pseudo-elements
+
+p::before { content: "👉 "; }               /* Insert before text */
+p::after { content: " 🎉"; }                /* Insert after text */
+p::first-line { text-transform: uppercase; }/* Style only the first line */
