@@ -1,0 +1,42 @@
+.question-ctr {
+    padding: 16px;
+}
+
+.question-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-ctr {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.option-ctr {
+    list-style: none;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+}
+
+
+.option-ctr label:hover {
+    cursor: pointer;
+}
+
+
+.score-card {
+    display: flex;
+    gap: 8px;
+    align-items: flex-end;
+    margin-bottom: 16px;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

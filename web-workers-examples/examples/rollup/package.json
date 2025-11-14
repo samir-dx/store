@@ -1,0 +1,17 @@
+{
+  "name": "rollup-worker-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rollup -c",
+    "serve": "http-server ./public"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@surma/rollup-plugin-off-main-thread": "^1.4.1",
+    "http-server": "^0.12.3",
+    "rollup": "^2.20.0"
+  }
+}
